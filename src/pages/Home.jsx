@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 // firebase import
 import { getDatabase, ref, set } from "firebase/database";
 import { app } from "../firebase";
@@ -9,7 +10,7 @@ const Home = () => {
   const [data, setData] = useState({
     key: "",
     title: "",
-    description: ""
+    description: "",
   });
 
   const putData = () => {
@@ -28,6 +29,7 @@ const Home = () => {
   return (
     <>
       <div className="home-container">
+        <h1>Upload to cloud</h1>
         <div className="input-box">
           <input
             onChange={handleInput}
